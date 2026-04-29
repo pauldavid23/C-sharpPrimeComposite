@@ -10,6 +10,7 @@ if (name == null)
 else
 {
     Console.WriteLine($"Hello, {name}!");
+    Console.WriteLine("Thank you for using PrimeComposite App!"); 
 }
 Console.WriteLine("Enter a number");
 int number = int.Parse(Console.ReadLine());

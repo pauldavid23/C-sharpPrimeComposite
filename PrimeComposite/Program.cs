@@ -7,13 +7,17 @@ if (name == null)
     Console.ReadKey();
     return;
 }
-else
-{
-    Console.WriteLine($"Hello, {name}!");
-    Console.WriteLine("Thank you for using PrimeComposite App!"); 
-}
+
+Console.WriteLine($"Hello, {name}!");
+Console.WriteLine("Thank you for using PrimeComposite App!");
+Console.ReadKey();
 Console.WriteLine("Enter a number");
-int number = int.Parse(Console.ReadLine());
+if (!int.TryParse(Console.ReadLine(), out int number))
+{
+    Console.WriteLine("Invalid input. Please enter a valid number.");
+    Console.ReadKey();
+    return;
+}
 
 if (number < 2)
 {
@@ -28,8 +32,9 @@ else if (IsPrime(number))
 else
 {
     Console.WriteLine($"{number} is a composite number.");
-    Console.ReadKey();
 }
+
+Console.ReadKey();
 
 bool IsPrime(int n)
 {

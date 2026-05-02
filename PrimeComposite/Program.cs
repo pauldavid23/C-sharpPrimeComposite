@@ -19,6 +19,9 @@ if (!int.TryParse(Console.ReadLine(), out int number))
     return;
 }
 
+Console.WriteLine("Press any key to check if your number is prime or composite...");
+Console.ReadKey();
+
 if (number < 2)
 {
     Console.WriteLine("Number must be greater than 1.");

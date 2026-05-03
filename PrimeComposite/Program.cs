@@ -3,7 +3,7 @@ Console.WriteLine("What is your name?");
 string name = Console.ReadLine();
 if (name == null)
 {
-    Console.WriteLine("Name cannot be null.");
+    Console.WriteLine("Sorry. Name cannot be null.");
     Console.ReadKey();
     return;
 }
